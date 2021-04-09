@@ -1,0 +1,64 @@
+{
+  "name": "excel-course",
+  "version": "1.0.0",
+  "description": "Pure JavaScript excel application",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack serve --mode development",
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Valentiniusly/Excel-course.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "excel"
+  ],
+  "browserslist": "> 0.25%, not dead",
+  "author": "Valentin Protsenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Valentiniusly/Excel-course/issues"
+  },
+  "homepage": "https://github.com/Valentiniusly/Excel-course#readme",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.12",
+    "autoprefixer": "^10.2.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^8.1.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.0",
+    "css-minimizer-webpack-plugin": "^1.3.0",
+    "eslint": "^7.23.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-loader": "^4.0.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "less-loader": "^8.0.0",
+    "mini-css-extract-plugin": "^1.4.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.9",
+    "postcss-loader": "^5.2.0",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.31.0",
+    "webpack-bundle-analyzer": "^4.4.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "normalize.css": "^8.0.1"
+  }
+}

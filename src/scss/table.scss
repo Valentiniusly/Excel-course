@@ -14,10 +14,42 @@
     flex-direction: row;
     min-height: 20px;
     height: $row-height;
+
+    & .col-resize, & .row-resize {
+      position: absolute;
+      opacity: 0;
+      background: $primary-color;
+      bottom: 0;
+      right: 0;
+      z-index: 1000;
+
+      &:hover {
+        opacity: 1 !important;
+      }
+    }
+
+    & .col-resize {
+      top: 0;
+      width: 4px;
+
+      &:hover {
+        cursor: col-resize;
+      }
+    }
+
+    & .row-resize {
+      left: 0;
+      height: 4px;
+
+      &:hover {
+        cursor: row-resize;
+      }
+    }
   }
 
   & .row-info {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     min-width: $info-cell-width;
@@ -31,6 +63,7 @@
     display: flex;
 
     & .column {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -57,7 +90,8 @@
 
       &.selected {
         border: none;
-        outline: 2px solid #3c74ff;
+        outline: 2px solid $primary-color;
+        z-index: 2;
       }
     }
   }

@@ -1,6 +1,6 @@
 export class Emitter {
   constructor() {
-    this.listeners = [];
+    this.listeners = {};
   }
 
   // dispatch, fire, trigger
@@ -20,7 +20,7 @@ export class Emitter {
   subscribe(event, fn) {
     this.listeners[event] = this.listeners[event] || [];
     this.listeners[event].push(fn);
-
+    
     return () => {
       this.listeners[event] =
         this.listeners[event].filter(listener => listener !== fn);
@@ -31,5 +31,7 @@ export class Emitter {
 const emitter = new Emitter();
 
 emitter.subscribe('valentin', data => console.log(data));
+emitter.subscribe('elena', data => console.log(data));
 
 emitter.emit('valentin', 42);
+emitter.emit('elena', 42);

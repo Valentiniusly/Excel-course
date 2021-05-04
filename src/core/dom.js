@@ -26,7 +26,7 @@ class Dom {
   }
 
   clear() {
-    this.html();
+    this.html('');
     return this;
   }
 
@@ -129,6 +129,6 @@ $.create = (tagName, classes = '') => {
   if (classes) {
     el.classList.add(classes);
   }
-
+  
   return $(el);
 };

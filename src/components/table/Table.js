@@ -58,14 +58,12 @@ export class Table extends ExcelComponent {
     this.$emit('table:select', $cell);
     const styles = $cell.getStyles(Object.keys(defaultStyles));
     this.$dispatch(actions.changeStyles(styles));
-    console.log('Styles to dispatch:', styles);
   }
 
   async resizeTable(event) {
     try {
       const data = await resizeHandler(this.$root, event);
       this.$dispatch(actions.tableResize(data));
-      console.log('Resize data:', data);
     } catch (e) {
       console.warn('Resize error', e.message);
     }

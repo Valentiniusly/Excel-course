@@ -1,4 +1,4 @@
-import {Page} from '@core/Page';
+import {Page} from '@/core/page/Page';
 import {Router} from '@core/routes/Router';
 
 class DashboardPage extends Page {

@@ -1,6 +1,5 @@
 {
   "name": "excel-course",
-  "type": "module",
   "version": "1.0.0",
   "description": "Pure JavaScript excel application",
   "main": "webpack.config.js",
